@@ -1,6 +1,6 @@
 
 % Import data from .mat file
-importdata("fig6_6.mat");
+importdata("C:\Users\rober\Documents\School\METG610\METG610_LEEDER\fig6_6.mat");
 pathSize = size(outputs.pathRadiance);
 waveLength = linspace(6e-6,25e-6, pathSize(2));
 
@@ -15,11 +15,11 @@ plot(waveLength,outputs.blackbody)
 
 % Convert data
 % Wavenumber is the inverse of wavelength eq 3.2
-waveNumber = waveLength.^-1;
+waveNumber = (waveLength.^-1).*1e-2;
 
 % Wavenumber is waveLength^2/10 * Wavelength Radiance
 % Wavenumber is 1/(10*waveNum^2) * Wavelength Radiance
-wavNumberRadiance = (outputs.pathRadiance.*(waveLength.^2))./10;
+wavNumberRadiance = (outputs.pathRadiance.*(waveLength.^2)).*10^15;
 
 % Plot data, post conversion
 figure
