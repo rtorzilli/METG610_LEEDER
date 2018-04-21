@@ -1,6 +1,6 @@
 
 % Import data from .mat file
-load('fig6_6')
+load('21Apr2018FIG66')
 pathSize = size(outputs.pathRadiance);
 waveLength = linspace(6e-6,25e-6, pathSize(2));
 

@@ -1,16 +1,8 @@
 
 % Import data from .mat file
-load('fig6_6')
+load('21Apr2018FIG81_Nauru')
 pathSize = size(outputs.pathRadiance);
 waveLength = linspace(6e-6,25e-6, pathSize(2));
-
-% Plot data, pre conversion
-figure
-plot(waveLength,outputs.pathRadiance)
-xlabel('Wavelength [m]')
-ylabel('Wavelength Radiance [W/cm2*sr*um]')
-hold on
-plot(waveLength,outputs.blackbody)
 
 % Convert data
 % Wavenumber is the inverse of wavelength eq 3.2

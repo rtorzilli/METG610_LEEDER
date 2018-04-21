@@ -8,7 +8,7 @@ waveLength = linspace(6e-6,25e-6, pathSize(2));
 figure
 plot(waveLength,outputs.pathRadiance)
 xlabel('Wavelength [m]')
-ylabel('Wavelength Radiance [W/cm2*sr*um]')
+ylabel('Wavelength Radiance [W/cm2*sr*um')
 hold on
 plot(waveLength,outputs.blackbody)
 
