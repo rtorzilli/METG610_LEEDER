@@ -53,6 +53,7 @@ ylabel('Wavenumber Radiance [mW/m2*sr*cm-1]')
 legend("Southern Iraq", "200K", "210K", "220K", "230K", "240K",...
     "250K", "260K", "270K", "280K", "290K", "300K")
 
+
 adjustedBB = bsxfun(@times,storm.outputs.blackbody,(waveLength'.^2).*10^15);
 figure
 plot(waveNumber,wavNumRadStorm)
