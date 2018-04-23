@@ -20,12 +20,10 @@ adjustedBB = bsxfun(@times,barrow.outputs.blackbody,(waveLength'.^2).*10^15);
 
 % Plot data, post conversion
 figure
-plotB = plot(waveNumber,wavNumberRadianceBarrow)
+plot(waveNumber,wavNumberRadianceBarrow)
 hold on
-plotN = plot(waveNumber,wavNumberRadianceNauru)
+plot(waveNumber,wavNumberRadianceNauru)
 hold on
-ploBB = plot(waveNumber,adjustedBB)
-hold off
+plot(waveNumber,adjustedBB)
 xlabel('Wavenumber [cm-1]')
 ylabel('Wavenumber Radiance [mW/m2*sr*cm-1]')
-legend([plotB plotN],["Barrow", "Nauru"])
