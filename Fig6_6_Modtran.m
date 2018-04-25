@@ -6,7 +6,6 @@ waveLength = linspace(6e-6,25e-6, pathSize(2));
 
 % Import data from text file 
 path = 'C:\Users\Robert\Documents\School\METG610\METG610_LEEDER\MODTRAND_OUT';
-formatspec = '%f%f%f%f%f%f%f%f%f%f%f%f%f';
 modtranData = xlsread(path+"\FIG661.xls",'User Data');
 
 % Convert data

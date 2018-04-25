@@ -11,6 +11,10 @@ xlabel('Wavelength [m]')
 ylabel('Wavelength Radiance [W/cm2*sr*um]')
 hold on
 plot(waveLength,outputs.blackbody)
+legend("FIG 6-6 Wave Length",...
+    "200K", "210K", "220K", "230K", "240K",...
+    "250K", "260K", "270K", "280K", "290K", "300K")
+hold off
 
 % Convert data
 % Wavenumber is the inverse of wavelength eq 3.2
@@ -27,3 +31,7 @@ xlabel('Wavenumber [cm-1]')
 ylabel('Wavenumber Radiance [mW/m2*sr*cm-1]')
 hold on
 plot(waveNumber,adjustedBB)
+legend("FIG 6-6 Wave Number",...
+    "200K", "210K", "220K", "230K", "240K",...
+    "250K", "260K", "270K", "280K", "290K", "300K")
+hold off
