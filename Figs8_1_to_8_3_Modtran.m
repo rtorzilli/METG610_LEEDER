@@ -4,10 +4,15 @@ made in prior code and figures
 %}
 % Import data from text file 
 path = 'C:\Users\Robert\Documents\School\METG610\METG610_LEEDER\MODTRAND_OUT';
+modPath = 'C:\Users\Robert\Documents\School\METG610\Modtran Interface\User Folder'
 fig81Barrow = xlsread(path+"\PettyFIGS.xlsx",'fig81B');
 fig81Nauru = xlsread(path+"\PettyFIGS.xlsx",'fig81N');
-fig82A = xlsread(path+"\PettyFIGS.xlsx",'fig82A');
-fig82B = xlsread(path+"\PettyFIGS.xlsx",'fig82B');
+
+fig82A = xlsread(modPath+"\fig82a3.xls",'neg10');
+fig82B = xlsread(modPath+"\fig82b1.xls",'neg10');
+
+%fig82A = xlsread(path+"\PettyFIGS.xlsx",'fig82A');
+%fig82B = xlsread(path+"\PettyFIGS.xlsx",'fig82B');
 fig83A = xlsread(path+"\PettyFIGS.xlsx",'fig83A');
 fig83B = xlsread(path+"\PettyFIGS.xlsx",'fig83B');
 fig83C_Storm = xlsread(path+"\PettyFIGS.xlsx",'fig83C_Storm');
@@ -17,6 +22,7 @@ fig83C_NoStorm = xlsread(path+"\PettyFIGS.xlsx",'fig83C_NoStorm');
 % and um to cm (1e4)
 
 % Plot data, MODTRAN
+%{
 figure
 plot(fig81Barrow(:,1),fig81Barrow(:,8).*1e7);
 hold on;
@@ -25,7 +31,7 @@ hold off;
 xlabel('Wavenumber [cm-1]');
 ylabel('Wavenumber Radiance [mW/m2*sr*cm-1]');
 legend("ModTran Barrow", "ModTran Nauru");
-
+%}
 figure
 plot(fig82A(:,1),fig82A(:,8).*1e7);
 xlabel('Wavenumber [cm-1]')
