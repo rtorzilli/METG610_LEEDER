@@ -1,12 +1,11 @@
 
 % Import data from .mat file
-load('21Apr2018FIG66');
+load('Data\21Apr2018FIG66');
 pathSize = size(outputs.pathRadiance);
 waveLength = linspace(6e-6,25e-6, pathSize(2));
 
 % Import data from text file 
-path = 'C:\Users\Robert\Documents\School\METG610\METG610_LEEDER\MODTRAND_OUT';
-modtranData = xlsread(path+"\FIG661.xls",'User Data');
+modtranData = xlsread("MODTRAND_OUT\FIG661.xls",'User Data');
 
 % Convert data
 % Wavenumber is the inverse of wavelength eq 3.2

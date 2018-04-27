@@ -1,7 +1,7 @@
 
 % Import data from .mat file
-nauru = load('21Apr2018FIG81_Nauru');
-barrow = load('21Apr2018FIG81_Barrow');
+nauru = load('Data\21Apr2018FIG81_Nauru');
+barrow = load('Data\21Apr2018FIG81_Barrow');
 
 pathSize = size(barrow.outputs.pathRadiance);
 waveLength = linspace(6.25e-6,35e-6, pathSize(2));

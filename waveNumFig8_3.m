@@ -1,9 +1,9 @@
 % Import data from .mat file
-sahara = load('FIG83_Sahara');
-iceSheet = load('FIG83_SouthPole');
-iraq = load('FIG83_Iraq');
-storm = load('FIG83_Storm');
-tropics = load('FIG83_Storm_NoCloud');
+sahara = load('Data\FIG83_Sahara');
+iceSheet = load('Data\FIG83_SouthPole');
+iraq = load('Data\FIG83_Iraq');
+storm = load('Data\FIG83_Storm');
+tropics = load('Data\FIG83_Storm_NoCloud');
 
 pathSize = size(iceSheet.outputs.pathRadiance);
 waveLength = linspace(6.25e-6,25e-6, pathSize(2));

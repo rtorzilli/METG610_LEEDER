@@ -1,13 +1,13 @@
 
+% Import data from .mat file
+down = load('Data\22AprFIG82_A');
+up = load('Data\22AprFIG82_B');
 pathSize = size(up.outputs.pathRadiance);
 waveLength = linspace(5.88e-6,25e-6, pathSize(2));
 
-% Import data from .mat file
-down = load('22AprFIG82_A');
 % Wavenumber is waveLength^2 * Wavelength Radiance * 1E15
 wavNumberRadianceDown = (down.outputs.pathRadiance.*(waveLength.^2)).*10^15;
 
-up = load('22AprFIG82_B');
 % Wavenumber is waveLength^2 * Wavelength Radiance * 1E15
 wavNumberRadianceUp = (up.outputs.pathRadiance.*(waveLength.^2)).*10^15;
 
